@@ -1,0 +1,38 @@
+import java.io.*;
+import java.util.*;
+
+//Class 1 is Student class
+
+class Student
+{
+    String name;
+    int id;
+    String dept;
+    
+    Student(String name, int id, String dept)
+    {
+        this.name = name;
+        this.id = id;
+        this.dept = dept;
+        
+    }
+}
+
+//Class 2 is Department class
+
+class Department
+{
+    String name;
+    private List<Students>students;
+    Department(String name, List<Students>students)
+    {
+        this.name = name;
+        this.students = students;
+    }
+        
+            public List<Students>getStudents
+            {
+                return students;
+                
+            }
+}
