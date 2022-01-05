@@ -1,4 +1,4 @@
-//One to Many relationship
+//Many to Many relationship
 import java.io.*;
 
 class Bank  //Create class Bank
@@ -33,10 +33,10 @@ class Main
     public static void main(String[] args)
     {
         Bank bank1 = new Bank("RBI");
-        Bank bank2 = new Bank("ICICI");
+        Bank bank2 = new Bank("ICICI"); //Multiple banks
         
         Employee emp1 = new Employee("Smart");
-        Employee emp2 = new Employee("VIT");
+        Employee emp2 = new Employee("VIT"); //Multiple employees
         
         System.out.println(emp1.getEmployeeName() + " is employee of " + bank1.getBankName());
         System.out.println(emp2.getEmployeeName() + " is employee of " + bank2.getBankName());      
