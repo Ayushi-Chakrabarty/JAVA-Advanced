@@ -1,0 +1,42 @@
+//One to Many relationship
+import java.io.*;
+
+class Bank  //Create class Bank
+{
+    private String name;
+    Bank(String name)
+    {
+        this.name = name;  //this keyword refers to current instance itself
+    }
+    
+    public String getBankName()
+    {
+        return this.name;
+    }
+}
+
+class Employee
+{
+    private String name;
+    Employee(String name)
+    {
+        this.name = name;
+    }
+    public String getEmployeeName()
+    {
+        return this.name;
+    }
+}
+
+class Main
+{
+    public static void main(String[] args)
+    {
+        Bank bank1 = new Bank("RBI");
+        Employee emp1 = new Employee("Smart");
+        Employee emp2 = new Employee("VIT");
+        
+        System.out.println(emp1.getEmployeeName() + " is employee of " + bank1.getBankName());
+        System.out.println(emp2.getEmployeeName() + " is employee of " + bank1.getBankName());      
+    }
+}
