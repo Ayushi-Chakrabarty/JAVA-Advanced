@@ -1,0 +1,36 @@
+import java.util.*;
+
+class Address
+{
+    int streetNum;
+    String city;
+    Address(int street, String c)
+    {
+        this.streetNum = street;
+        this.city = c;
+    }
+}
+
+class StudentClass
+{
+    int rollNum;
+    String studentName;
+    
+    //Creating HAS-A relationship with Address class 
+    Address studentAddr;
+    
+    StudentClass(int roll, String name, Address addr)
+    {
+        this.rollNum = roll;
+        this.studentName = name;
+        this.studentAddr = addr;
+    }
+    
+    public static void main(String args[])
+    {
+        Address ad = new Address(55, "Agra");
+        StudentClass obj = new StudentClass(123, "Chaitanya", ad);
+        System.out.println(obj.rollNum + " " + obj.studentName);
+        System.out.println("Address: " + obj.studentAddr.streetNum + " " + obj.studentAddr.city);
+    }
+}
